@@ -1,1 +1,31 @@
 // mixin
+
+@use "setting"as *;
+
+@mixin for-device($size) {
+  @if $size == "xl" {
+    @media screen and (max-width: $for-xl) {
+      @content;
+    }
+  } @else if $size == "pc" {
+    @media screen and (max-width: $for-pc) {
+      @content;
+    }
+  } @else if $size == "tablet-xl" {
+    @media screen and (max-width: $for-tablet-xl) {
+      @content;
+    }
+  } @else if $size == "tablet" {
+    @media screen and (max-width: $for-tablet) {
+      @content;
+    }
+  } @else if $size == "phone" {
+    @media screen and (max-width: $for-phone) {
+      @content;
+    }
+  } @else if $size == "xs" {
+    @media screen and (max-width: $for-xs) {
+      @content;
+    }
+  }
+}

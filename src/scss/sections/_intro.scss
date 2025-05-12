@@ -1,0 +1,81 @@
+@use 'sass:math';
+@use 'sass:map';
+@use '../global' as *;
+
+.intro {
+  .intro__inner {
+    position: relative;
+  }
+
+  .intro__bg {
+    // height: 500vh;
+    // max-height: calc(405px * 5);
+    width: 100%;
+    aspect-ratio: 331 / calc(405 * 5);
+  }
+
+  .intro__imgs {
+    // height: 100vh;
+    // max-height: 405px;
+    position: sticky;
+    top: 0;
+    aspect-ratio: 331 / 405;
+    width: 100%;
+  }
+
+  .intro__img {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &:nth-of-type(2) {
+      z-index: 2;
+    }
+
+    &:nth-of-type(3) {
+      z-index: 3;
+    }
+
+    &:nth-of-type(4) {
+      z-index: 4;
+    }
+  }
+
+  .intro__over {
+    position: absolute;
+    inset: 0;
+    padding: 90px 45px 0;
+    z-index: 5;
+    color: #fff;
+    font-family: var(--font-mincho);
+  }
+
+  .intro__title {
+    font-size: 42px;
+    line-height: 1.5;
+  }
+
+  .intro__text {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 2;
+  }
+
+  .intro__en {
+    width: 104px;
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

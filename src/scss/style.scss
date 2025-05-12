@@ -2,8 +2,10 @@
 @use "global" as *;
 @use "others/destyle";
 @use "others/reset";
-@use "components/header";
-@use "sections/sample/sample";
+@use "components/_header.scss";
+@use "sections/_kv.scss";
+@use "sections/_intro.scss";
+@use "sections/_sample.scss";
 
 /* stylelint-disable-next-line scss/at-rule-no-unknown */
 @tailwind utilities;

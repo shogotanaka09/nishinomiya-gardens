@@ -1,0 +1,9 @@
+@use "sass:math";
+@use "sass:map";
+@use "../global" as *;
+
+
+.sample {
+  background-color: #f0f0f0;
+  height: 200vh;
+}
