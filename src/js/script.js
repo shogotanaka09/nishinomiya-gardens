@@ -1,3 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  console.log('script start')
+  gsap.registerPlugin(ScrollTrigger);
+
+  
 })

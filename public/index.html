@@ -1,62 +1,218 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <!-- meta -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>タイトル</title>
+    <meta name="description" content="概要" />
+    <meta name="keywords" content="キーワード" />
+    <meta name="format-detection" content="telephone=no" />
 
-<head>
-  <!-- meta -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>タイトル</title>
-  <meta name="description" content="概要">
-  <meta name="keywords" content="キーワード">
-  <meta name="format-detection" content="telephone=no" />
+    <!-- favicon -->
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
 
-  <!-- favicon -->
-  <link rel="icon" href="./favicon.ico" />
-  <link rel="shortcut icon" href="./favicon.ico">
-  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+    <!-- ogp -->
+    <meta property="og:url" content="https://hc.kowa.co.jp.syncronkowa/campaign/" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="タイトル" />
+    <meta property="og:title" content="タイトル" />
+    <meta property="og:description" content="概要" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:title" content="タイトル" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:description" content="概要" />
 
-  <!-- ogp -->
-  <meta property="og:url" content="https://hc.kowa.co.jp.syncronkowa/campaign/">
-  <meta property="og:locale" content="ja_JP">
-  <meta property="og:image" content="">
-  <meta property="og:site_name" content="タイトル">
-  <meta property="og:title" content="タイトル">
-  <meta property="og:description" content="概要">
-  <meta property="og:type" content="website">
-  <meta name="twitter:title" content="タイトル">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="">
-  <meta name="twitter:description" content="概要">
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
-  <!-- css -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
+  </head>
 
-  <!-- font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-</head>
+  <body>
 
-<body>
-  <header class="c-header">
-    <div class="c-header__inner">
-      <h1 class="c-header__logo">
-        <img src="./assets/img/logo.svg" alt="">
-        <span class="hidden"></span>
-      </h1>
+    <div class="bg">
+      <div class="bg__inner">
+        <picture>
+          <source srcset="./assets/img/img-pc-bg.webp 1x,./assets/img/img-pc-bg_2x.webp 2x" type="image/webp">
+          <source srcset="./assets/img/img-pc-bg.png 1x,./assets/img/img-pc-bg_2x.png 2x">
+          <img src="./assets/img/img-pc-bg_2x.png" alt="料理をする男性" width="1200" height="870">
+        </picture>
+      </div>
     </div>
-  </header>
+    <!-- /bg -->
 
-  <main>
-  </main>
+    <header class="header">
+      <div class="header__inner">
+        <nav class="header__nav">
+          <div class="header__block">
+            <p class="header__title">MENU</p>
+            <ul class="header__list">
+              <li class="header__item"><a href="#">Top</a></li>
+              <li class="header__item"><a href="#">スパイス クルーズ</a></li>
+              <li class="header__item">
+                <a href="#">色とりどりの<br />スパイスメニュー</a>
+              </li>
+              <li class="header__item"><a href="#">LIFE WITH SPICES</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="header__block">
+          <p class="header__title">SHARE</p>
+          <ul class="header__sns">
+            <li class="header__icon">
+              <a href="#">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="./assets/img/icon-facebook-black.svg">
+                  <img src="./assets/img/icon-facebook.svg" alt="Facebook" width="32" height="32" />
+                </picture>
+              </a>
+            </li>
+            <li class="header__icon">
+              <a href="#">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="./assets/img/icon-x-black.svg">
+                  <img src="./assets/img/icon-x.svg" alt="X" width="32" height="32" />
+                </picture>
+              </a>
+            </li>
+            <li class="header__icon">
+              <a href="#">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="./assets/img/icon-line-black.svg">
+                  <img src="./assets/img/icon-line.svg" alt="LINE" width="32" height="32" />
+                </picture>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="header__anchor">
+          <div class="header__anchor-icon">
+            <picture>
+              <source media="(max-width: 767px)" srcset="./assets/img/icon-anchor-yellow.svg">
+              <img src="./assets/img/icon-anchor.svg" alt="再生ボタン" width="36" height="24" />
+            </picture>
+          </div>
+          <p class="header__anchor-text">SPECIAL MOVIE</p>
+        </div>
+        <div class="header__bgm">
+          <div class="header__bgm-icon">
+            <picture>
+              <source media="(max-width: 767px)" srcset="./assets/img/icon-bgm-active-white.svg">
+              <img src="./assets/img/icon-bgm-active.svg" alt="再生ボタン" width="71" height="71" />
+            </picture>
+          </div>
+          <div class="header__bgm-icon">
+            <img src="./assets/img/icon-bgm-disabled.svg" alt="再生ボタン" width="71" height="71" />
+          </div>
+        </div>
+        <h1 class="header__logo">
+          <img src="./assets/img/logo.svg" alt="NISHINOMIYA GARDENS" width="144" height="27" />
+          <span class="hidden">NISHINOMIYA GARDENS</span>
+        </h1>
+        <div class="header__drawer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+    <!-- /header -->
 
-  <footer class="c-footer">
-    <div class="c-footer__inner">
-      
+    <div class="main-contents">
+      <main>
+        <section class="kv">
+          <div class="kv__inner">
+            <h2 class="kv__title">
+            <img src="./assets/img/heading-kv.svg" alt="スパイスと出会う　刺激的な日々 GARDENS MEETS Spice" width="458" height="215">
+            </h2>
+            <div class="kv__info">
+              <p class="kv__date">
+                <span class="text">
+                  6.18<span class="small">wed</span>
+                </span>
+                <span class="arrow">
+                  <img src="./assets/img/arrow-right-white.svg" alt="右向きの矢印" width="29" height="8">
+                </span>
+                <span class="text">
+                  7.22<span class="small">tue</span>
+                </span>
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- /kv -->
+
+        <section class="intro">
+          <div class="intro__inner">
+            <div class="intro__bg">
+              <div class="intro__img">
+                <picture>
+                  <source srcset="./assets/img/img-intro-01.webp 1x,./assets/img/img-intro-01_2x.webp 2x" type="image/webp">
+                  <source srcset="./assets/img/img-intro-01.png 1x,./assets/img/img-intro-01_2x.png 2x">
+                  <img src="./assets/img/img-intro-01_2x.png" alt="ガーデンズで巡るスパイスクルーズ" width="331" height="405" loading="lazy">
+                </picture>
+              </div>
+              <div class="intro__img">
+                <picture>
+                  <source srcset="./assets/img/img-intro-02.webp 1x,./assets/img/img-intro-02_2x.webp 2x" type="image/webp">
+                  <source srcset="./assets/img/img-intro-02.png 1x,./assets/img/img-intro-02_2x.png 2x">
+                  <img src="./assets/img/img-intro-02_2x.png" alt="ガーデンズで巡るスパイスクルーズ" width="331" height="405" loading="lazy">
+                </picture>
+              </div>
+              <div class="intro__img">
+                <picture>
+                  <source srcset="./assets/img/img-intro-03.webp 1x,./assets/img/img-intro-03_2x.webp 2x" type="image/webp">
+                  <source srcset="./assets/img/img-intro-03.png 1x,./assets/img/img-intro-03_2x.png 2x">
+                  <img src="./assets/img/img-intro-03_2x.png" alt="ガーデンズで巡るスパイスクルーズ" width="331" height="405" loading="lazy">
+                </picture>
+              </div>
+              <div class="intro__img">
+                <picture>
+                  <source srcset="./assets/img/img-intro-04.webp 1x,./assets/img/img-intro-04_2x.webp 2x" type="image/webp">
+                  <source srcset="./assets/img/img-intro-04.png 1x,./assets/img/img-intro-04_2x.png 2x">
+                  <img src="./assets/img/img-intro-04_2x.png" alt="ガーデンズで巡るスパイスクルーズ" width="331" height="405" loading="lazy">
+                </picture>
+              </div>
+            </div>
+            <div class="intro__over">
+              <h2 class="intro__title">ガーデンズで巡る<br>スパイスクルーズ</h2>
+              <p class="intro__text">
+                スパイスは、静かに心をほどく。<br>
+                趣向を凝らしたこだわりの空間で、<br>
+                香り、彩り、やさしい辛みが<br>
+                そっと感覚を呼び覚ましてくれる。<br>
+                そんなスパイスの魅力を丁寧に引き出した<br>
+                特別なメニューをご紹介します。<br>
+                暮らしにほどよい刺激を添える、<br>
+                多彩な味わいに出会える<br>
+                スパイスクルーズへ<br>
+                ぜひ巡ってください。
+              </p>
+              <div class="intro__img">
+                <img src="./assets/img/intro-en.svg" alt="Spice" width="105" height="61" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="c-footer">
+        <div class="c-footer__inner"></div>
+      </footer>
     </div>
-  </footer>
-  <script src="./assets/js/script.js"></script>
-</body>
+    <!-- /main-contents -->
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
