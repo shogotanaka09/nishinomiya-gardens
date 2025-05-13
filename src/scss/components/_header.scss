@@ -19,7 +19,8 @@
     position: fixed;
     background-color: #e67057;
     align-items: flex-start;
-    padding-block: 32px;
+    padding-block: 37px;
+    overflow-y: auto;
     top: 0;
     left: 0;
     width: 100%;
@@ -40,10 +41,15 @@
     flex-direction: column;
     align-items: center;
     font-family: var(--font-mincho);
+
+    @include for-device(pc) {
+      width: 209px;
+    }
   }
 
   .header__nav {
     margin-bottom: 30px;
+    width: 100%;
   }
 
   .header__block {
@@ -58,6 +64,11 @@
     border-bottom: 1px solid currentColor;
     padding: 8px 0;
     margin-bottom: 20px;
+    letter-spacing: -0.01em;
+
+    @include for-device(pc) {
+      padding: 6px 0;
+    }
   }
 
   .header__list {
@@ -66,11 +77,16 @@
   .header__item {
     &:not(:first-child) {
       margin-top: 16px;
+
+      @include for-device(pc) {
+        margin-top: 14px;
+      }
     }
     a {
       font-weight: 800;
       font-size: 16px;
       line-height: 1.4;
+      letter-spacing: -0.08em;
     }
   }
 
@@ -145,5 +161,4 @@
       height: auto;
     }
   }
-
 }

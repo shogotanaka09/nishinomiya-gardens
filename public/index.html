@@ -40,7 +40,7 @@
     />
   </head>
 
-  <body>
+  <body class="is-fixed">
     <div class="bg">
       <div class="bg__inner">
         <div class="bg__img">
@@ -63,7 +63,7 @@
               <li class="header__item"><a href="#">Top</a></li>
               <li class="header__item"><a href="#">スパイス クルーズ</a></li>
               <li class="header__item">
-                <a href="#">色とりどりの<br />スパイスメニュー</a>
+                <a href="#">色とりどりの<br class="wide-only" />スパイスメニュー</a>
               </li>
               <li class="header__item"><a href="#">LIFE WITH SPICES</a></li>
             </ul>
@@ -121,14 +121,23 @@
           </button>
         </div>
         <h1 class="header__logo">
-          <img src="./assets/img/logo.svg" alt="NISHINOMIYA GARDENS" width="144" height="27" />
+          <picture>
+            <source media="(max-width: 1300px)" srcset="./assets/img/logo-white.svg" />
+            <img src="./assets/img/logo.svg" alt="NISHINOMIYA GARDENS" width="144" height="27" />
+          </picture>
           <span class="hidden">NISHINOMIYA GARDENS</span>
         </h1>
       </div>
     </header>
     <!-- /header -->
 
-    <div class="drawer js-drawer"></div>
+    <div class="drawer js-drawer is-disabled"></div>
+
+    <button type="button" class="js-skip-btn">動画をスキップ</button>
+    <div class="btnarea">
+      <div class="js-opening-button">音あり</div>
+      <div class="js-opening-button">音なし</div>
+    </div>
 
     <div class="main-contents">
       <main>
@@ -136,9 +145,9 @@
           <div class="kv__inner">
             <div class="kv__bg">
               <div class="kv__pv">
-                <video class="js-kv-movie" src="./assets/video/kv.mp4" autoplay muted playsinline loop></video>
+                <video class="js-kv-movie" src="./assets/video/kv.mp4#t=0.1" muted playsinline></video>
               </div>
-              <div class="kv__mv">
+              <div class="kv__mv js-kv-img">
                 <picture>
                   <source srcset="./assets/img/img-kv.webp 1x, ./assets/img/img-kv_2x.webp 2x" type="image/webp" />
                   <source srcset="./assets/img/img-kv.png 1x, ./assets/img/img-kv_2x.png 2x" />
@@ -279,8 +288,7 @@
         </section>
         <!-- /intro -->
 
-        <section class="sample">
-        </section>
+        <section class="sample"></section>
       </main>
 
       <footer class="c-footer">

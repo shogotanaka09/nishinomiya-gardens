@@ -12,11 +12,13 @@
   }
 
   .kv__pv {
+    aspect-ratio: 375 / 652;
     video {
       display: block;
-      height: auto;
+      height: 100%;
       width: 100%;
       max-height: 870px;
+      object-fit: cover;
     }
   }
 
@@ -25,7 +27,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    // opacity: 0;
+    opacity: 0;
 
     img {
       width: 100%;
@@ -41,10 +43,22 @@
     padding-bottom: 43px;
     display: flex;
     flex-direction: column;
+
+    @include for-device(tablet) {
+      padding-top: 36px;
+      padding-left: 18px;
+      padding-bottom: 38px;
+    }
   }
 
   .kv__title {
-    width: 458px;
+    width: 100%;
+    max-width: 458px;
+
+    @include for-device(tablet) {
+      max-width: 343px;
+      width: calc(343 / 375 * 100vw);
+    }
 
     img {
       width: 100%;
@@ -61,17 +75,40 @@
     font-weight: 700;
     font-family: var(--font-mincho);
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 20px;
+
+    @include for-device(tablet) {
+      gap: 11px;
+    }
+
     .text {
       font-size: 50px;
+
+      @include for-device(tablet) {
+        font-size: 38px;
+      }
     }
 
     .small {
       font-size: 33px;
+
+      @include for-device(tablet) {
+        font-size: 25px;
+        margin-left: 5px;
+      }
     }
 
     .arrow {
+      width: 28px;
+      @include for-device(tablet) {
+        width: 23px;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }

@@ -12,7 +12,11 @@
 }
 
 body {
-  background-color: #e67057;
+  background-color: #ffffff;
+
+  &.is-fixed {
+    overflow: hidden;
+  }
 }
 
 .drawer {
@@ -36,6 +40,10 @@ body {
 
   &.is-open {
     background-image: url('../img/icon-drawer-close.svg');
+  }
+
+  &.is-disabled {
+    pointer-events: none;
   }
 }
 
@@ -78,4 +86,48 @@ body {
       object-position: left;
     }
   }
+}
+
+.wide-only {
+  display: block;
+
+  @include for-device(pc) {
+    display: none;
+  }
+}
+
+.js-skip-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  z-index: 9998;
+}
+
+.btnarea {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 9998;
+  gap: 5px;
+}
+
+.js-opening-button {
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: visibility 0.5s;
 }
