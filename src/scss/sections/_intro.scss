@@ -8,15 +8,10 @@
   }
 
   .intro__bg {
-    // height: 500vh;
-    // max-height: calc(405px * 5);
     width: 100%;
-    aspect-ratio: 331 / calc(405 * 5);
   }
 
   .intro__imgs {
-    // height: 100vh;
-    // max-height: 405px;
     position: sticky;
     top: 0;
     aspect-ratio: 331 / 405;
