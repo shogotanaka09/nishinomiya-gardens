@@ -112,7 +112,7 @@
         <div class="header__bgm">
           <button class="header__bgm-icon js-bgm-button is-active" type="button">
             <picture>
-              <source media="(max-width: 1300px)" srcset="./assets/img/icon-bgm-active-white.svg" />
+              <source media="(max-width: 1300px)" srcset="./assets/img/icon-bgm-active-sp.svg" />
               <img src="./assets/img/icon-bgm-active.svg" alt="再生ボタン" width="71" height="71" />
             </picture>
           </button>
@@ -133,7 +133,6 @@
 
     <div class="drawer js-drawer is-disabled"></div>
 
-    <button type="button" class="js-skip-btn">動画をスキップ</button>
     <div class="btnarea">
       <div class="js-opening-button">音あり</div>
       <div class="js-opening-button">音なし</div>
@@ -174,6 +173,10 @@
                 </p>
               </div>
             </div>
+            <button type="button" class="kv__action js-skip-btn">
+              <p>SKIP</p>
+              <img src="./assets/img/arrow-down-yellow.svg" alt="下向きの矢印" width="7" height="49" />
+            </button>
           </div>
         </section>
         <!-- /kv -->
@@ -181,8 +184,8 @@
         <section class="intro">
           <div class="intro__inner">
             <div class="intro__bg">
-              <div class="intro__imgs">
-                <div class="intro__img is-active">
+              <div class="intro__imgs js-change-elements">
+                <div class="intro__img js-change-element is-active">
                   <picture>
                     <source
                       srcset="./assets/img/img-intro-01.webp 1x, ./assets/img/img-intro-01_2x.webp 2x"
@@ -198,7 +201,7 @@
                     />
                   </picture>
                 </div>
-                <div class="intro__img">
+                <div class="intro__img js-change-element">
                   <picture>
                     <source
                       srcset="./assets/img/img-intro-02.webp 1x, ./assets/img/img-intro-02_2x.webp 2x"
@@ -214,7 +217,7 @@
                     />
                   </picture>
                 </div>
-                <div class="intro__img">
+                <div class="intro__img js-change-element">
                   <picture>
                     <source
                       srcset="./assets/img/img-intro-03.webp 1x, ./assets/img/img-intro-03_2x.webp 2x"
@@ -230,7 +233,7 @@
                     />
                   </picture>
                 </div>
-                <div class="intro__img">
+                <div class="intro__img js-change-element">
                   <picture>
                     <source
                       srcset="./assets/img/img-intro-04.webp 1x, ./assets/img/img-intro-04_2x.webp 2x"
@@ -246,7 +249,7 @@
                     />
                   </picture>
                 </div>
-                <div class="intro__over">
+                <div class="intro__over js-over-element">
                   <h2 class="intro__title">ガーデンズで巡る<br />スパイスクルーズ</h2>
                   <p class="intro__text">
                     スパイスは、静かに心をほどく。<br />

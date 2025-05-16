@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const drawer = document.querySelector(".js-drawer");
 
     gsap.set(imgEl, { opacity: 0 });
-    gsap.set(skipBtn, { opacity: 0 });
 
     const handleMovieEnd = () => {
       gsap.to(movieEl, {
@@ -58,26 +57,34 @@ document.addEventListener('DOMContentLoaded', function () {
               });
             }
           });
-          gsap.to(skipBtn, {
-            opacity: 1,
-            duration: 0.5,
-            delay: 0.5
-          });
         }, 1000);
       });
     });
   }
   initKv();
 
-  const scaleEl = document.querySelector(".intro__imgs");
-  const sampleEl = document.querySelector(".sample");
-  const introImgs = document.querySelectorAll(".intro__img");
+  const scaleEl = document.querySelector(".js-change-elements");
+  const introImgs = document.querySelectorAll(".js-change-element");
   const imgHeight = introImgs[0].offsetHeight;
+  const overEl = document.querySelector(".js-over-element");
+
+  gsap.set(overEl, { opacity: 0 });
 
   // スクロールアニメーション
   function imgScroll() {
     introImgs.forEach((img, index) => {
       gsap.set(img, { opacity: index === 0 ? 1 : 0 });
+    });
+
+    gsap.to(
+      overEl, {
+      opacity: 1,
+      duration: 1,
+      delay: 0.5,
+      scrollTrigger: {
+        trigger: scaleEl,
+        start: "top 40%",
+      },
     });
 
     gsap.fromTo(
@@ -99,6 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       gsap.to(img, {
         opacity: 1,
+        duration: 1.3,
         scrollTrigger: {
           trigger: scaleEl,
           start: `bottom+=${imgHeight * index}px bottom`,
@@ -108,32 +116,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
   imgScroll();
-
-  // ピン留め同期
-  function pinScaleEl() {
-    const endValue = `+=${imgHeight * 3}`;
-    
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: scaleEl,
-        start: "top top",
-        end: endValue,
-        pin: true,
-        pinSpacing: false,
-        anticipatePin: 1,
-      }
-    });
-
-    ScrollTrigger.create({
-      trigger: scaleEl,
-      start: "top top",
-      end: endValue,
-      pin: sampleEl,
-      pinSpacing: true,
-      anticipatePin: 1,
-    });
-  }
-  pinScaleEl();
 
   // ドロワー
   function drawer() {
